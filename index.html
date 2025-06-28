@@ -195,18 +195,20 @@
 
         <h2>Education</h2>
         <p>B.Tech in Information Technology</p>
-
+        
         <h2>Technical Skills</h2>
+        <div style="display: flex; justify-content: center;">
         <div class="skills">
-          <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java">
+           <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java">
           <img src="https://img.icons8.com/ios/50/mysql-logo.png" alt="MySQL">
           <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-plain.svg" alt="Hibernate">
           <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Jakarta_EE_logo.svg" alt="JEE">
           <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript">
           <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML">
           <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
-        </div>
+       </div>
+       </div>
+       
 
         <h2>Projects</h2>
         <div class="projects">
@@ -218,18 +220,19 @@
         </div>
 
         <h2>Certifications</h2>
-        <div class="certs">
-          <div class="certification">Full Stack Java Developer - Tap Academy</div>
-          <div class="certification">Business English Certificate Preliminary - Cambridge Assessment</div>
-          <div class="certification">Soft Skills - NPTEL</div>
-          <div class="certification">Cybersecurity Privacy and Policy - NPTEL</div>
-          <div class="certification">What is Data Science - IBM (Coursera)</div>
-          <div class="certification">Oracle Certified Foundation Associate - Oracle Cloud Infrastructure</div>
-        </div>
+         <button onclick="toggleCerts()" class="btn-download">Show Certifications</button>
+       <ul id="certList" style="display: none; padding-left: 20px;">
+       <li>Full Stack Java Developer - Tap Academy</li>
+        <li>Business English Certificate Preliminary - Cambridge Assessment</li>
+        <li>Soft Skills - NPTEL</li>
+        <li>Cybersecurity Privacy and Policy - NPTEL</li>
+        <li>What is Data Science - IBM (Coursera)</li>
+        <li>Oracle Certified Foundation Associate - Oracle Cloud Infrastructure</li>
+        </ul>
+
 
         <h2>Languages Known</h2>
-        <p>Tamil, English</p>
-
+        <p style="text-align: left;">Tamil, English</p>
         <a href="KaviyaResume.pdf" class="btn-download">Download Resume</a>
       </div>
     </div>
@@ -258,6 +261,16 @@
   <p>LinkedIn: <a href="https://www.linkedin.com/in/kaviyasri-r-888a36250/" style="color:#fff;" target="_blank">View Profile</a> | GitHub: <a href="https://github.com/Kaviyasri11" style="color:#fff;" target="_blank">@Kaviyasri11</a></p>
   <p>&copy; 2025 Kaviyasri R. All Rights Reserved.</p>
 </footer>
+<script>
+  function toggleCerts() {
+    const list = document.getElementById("certList");
+    if (list.style.display === "none") {
+      list.style.display = "block";
+    } else {
+      list.style.display = "none";
+    }
+  }
+</script>
 <script>
   // Disable right-click globally (except on resume download)
   document.addEventListener('contextmenu', event => {
