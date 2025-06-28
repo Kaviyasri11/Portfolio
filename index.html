@@ -171,6 +171,41 @@
       color: white;
     }
 
+    .project-card {
+      margin-bottom: 15px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .project-card h3 {
+      cursor: pointer;
+      color: #000;
+      /* Black color */
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      font-weight: normal;
+      /* No bold */
+    }
+
+    .project-desc {
+      padding-left: 20px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      margin-right: 6px;
+       font-size: 30px;
+    }
+
+    .rotate {
+      transform: rotate(90deg);
+      /* ▶ becomes ▼ */
+    }
+
+
     footer {
       background: #1f2122;
       color: white;
@@ -242,46 +277,40 @@
           </div>
         </div>
 
-        <h2 style="cursor: pointer;" onclick="toggleSection('projectList', this)">▶ Projects</h2>
-        <ul id="projectList" style="display: none; padding-left: 20px;">
-          <li>
-            <strong>🍽️ Food Delivery Web Application</strong><br />
-            <em>A Full-Stack Online Food Ordering System</em><br />
-            <strong>Description:</strong>
-            <ul>
-              <li>Designed and developed a dynamic web application for browsing menus, adding items to cart, and
-                processing orders.</li>
-              <li>Implemented cart features similar to Amazon/Swiggy with quantity updates and total price calculation
-                using JavaScript.</li>
-              <li>Handled backend operations with Java, Servlets, JDBC and MySQL for real-time data operations.</li>
-              <li>Ensured responsive UI using HTML, CSS, and JavaScript with proper input validations.</li>
-              <li>Integrated Hibernate and Spring Boot to manage data flow and enhance scalability.</li>
-            </ul>
-            <strong>Technologies Used:</strong> Core Java, JDBC, MySQL, Hibernate, Spring Boot, JEE, JavaScript, HTML,
-            CSS
-          </li>
-          <br />
-          <li>
-            <strong>🛍 Monitoring Fake Reviews of Products</strong><br />
-            <em>Ensuring Authenticity in Consumer Feedback</em><br />
-            <strong>Description:</strong>
-            <ul>
-              <li>Developed a machine learning model to detect fake or AI-generated product reviews using Logistic
-                Regression and LSTM.</li>
-              <li>Performed data preprocessing, tokenization, and vectorization using TF-IDF techniques.</li>
-              <li>Built an interactive web interface using Streamlit for user input and live prediction.</li>
-              <li>Improved accuracy and reduced false positives by fine-tuning model thresholds.</li>
-            </ul>
-            <strong>Tools & Technologies:</strong> Python, Anaconda, Streamlit, Logistic Regression, LSTM, Pandas,
-            Scikit-learn, NLP
-          </li>
-        </ul>
+        <h2 onclick="toggleProjects()" style="cursor: pointer;">
+          <span id="mainArrow" class="arrow">▸</span> Projects
+        </h2>
+
+
+        <div id="projectContainer" style="display: none;">
+          <div class="project-card">
+            <h3 onclick="toggleDescription(this)">Food Delivery Web Application ▾</h3>
+            <div class="project-desc" style="display: none;">
+              <ul>
+                <li>Designed and developed a dynamic web app for ordering food with menu, cart, and checkout flow.</li>
+                <li>Cart features mimic Amazon/Swiggy: quantity update, dynamic price calc using JavaScript.</li>
+                <li>Backend: Java Servlets, JDBC, MySQL; integrated Hibernate and Spring Boot.</li>
+              </ul>
+              <p><strong>Technologies:</strong> Java, JDBC, MySQL, Hibernate, Spring Boot, HTML, CSS, JS</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 onclick="toggleDescription(this)">Monitoring Fake Reviews ▾</h3>
+            <div class="project-desc" style="display: none;">
+              <ul>
+                <li>Built an ML model to detect fake/computer-generated reviews using Logistic Regression and LSTM.</li>
+                <li>Preprocessed data using TF-IDF; created Streamlit UI for predictions.</li>
+              </ul>
+              <p><strong>Technologies:</strong> Python, Streamlit, LSTM, Logistic Regression, Anaconda</p>
+            </div>
+          </div>
+        </div>
 
 
 
 
-
-        <h2 style="cursor: pointer;" onclick="toggleSection('certList', this)">▶ Certifications</h2>
+        <h2 style="cursor: pointer;" onclick="toggleSection('certList', this)"><span class="arrow">▸ </span> Certifications</h2>
         <ul id="certList" style="display: none; padding-left: 20px;">
           <li>Full Stack Java Developer - Tap Academy</li>
           <li>Business English Certificate Preliminary - Cambridge Assessment</li>
@@ -335,9 +364,10 @@
 
     </div>
 
-    <p style="color: #ccc; font-size: 0.9rem;">📍Salem, India | 📞+91 9751358104 |<a href="https://mail.google.com/mail/?view=cm&fs=1&to=kaviyasrirajendran11@gmail.com" target="_blank">
-  <i class="fas fa-envelope"></i> ✉️kaviyasrirajendran11@gmail@gmail.com
-</a></p>
+    <p style="color: #ccc; font-size: 0.9rem;">📍Salem, India | 📞+91 9751358104 |<a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=kaviyasrirajendran11@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> ✉️kaviyasrirajendran11@gmail@gmail.com
+      </a></p>
     <p style="margin-top: 20px;">&copy; 2025 Kaviyasri R. All Rights Reserved.</p>
   </footer>
 
@@ -347,7 +377,27 @@
       const isVisible = list.style.display === "block";
 
       list.style.display = isVisible ? "none" : "block";
-      heading.innerHTML = (isVisible ? '▶ ' : '▼ ') + heading.textContent.slice(2);
+      heading.innerHTML = (isVisible ? '▸ ' : '▾ ') + heading.textContent.slice(2);
+    }
+  </script>
+  <script>
+
+    function toggleProjects() {
+      const container = document.getElementById("projectContainer");
+      const arrow = document.getElementById("mainArrow");
+
+      const isVisible = container.style.display === "block";
+      container.style.display = isVisible ? "none" : "block";
+
+      // Rotate the arrow
+      if (arrow) {
+        arrow.classList.toggle("rotate", !isVisible);
+      }
+    }
+
+    function toggleDescription(element) {
+      const desc = element.nextElementSibling;
+      desc.style.display = desc.style.display === "none" ? "block" : "none";
     }
   </script>
 
