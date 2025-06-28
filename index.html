@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaviyasri R - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  
+
   <style>
     * {
       margin: 0;
@@ -64,13 +65,20 @@
       color: #fff;
       font-size: 1.4rem;
       font-weight: 600;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
       animation: bounceText 2s infinite;
     }
 
     @keyframes bounceText {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     .profile-img {
@@ -79,7 +87,7 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .left-section h1 {
@@ -104,16 +112,19 @@
       color: #d81b60;
       font-size: 1.4rem;
       margin: 20px 0 10px;
+      text-align: left;
     }
 
-    .info p, .info a {
+
+    .info p,
+    .info a {
       color: #333;
       font-size: 0.95rem;
       line-height: 1.6;
     }
 
     .info a {
-      color: #1f2122;
+      color: white;
       text-decoration: none;
     }
 
@@ -121,7 +132,9 @@
       text-decoration: underline;
     }
 
-    .skills, .projects, .certs {
+    .skills,
+    .projects,
+    .certs {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
@@ -136,7 +149,8 @@
       transform: scale(1.2);
     }
 
-    .project, .certification {
+    .project,
+    .certification {
       width: 100%;
       margin-bottom: 10px;
     }
@@ -153,7 +167,8 @@
     }
 
     .btn-download:hover {
-      background: #0c53c6;
+      background-color: black;
+      color: white;
     }
 
     footer {
@@ -164,25 +179,41 @@
     }
 
     @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(50px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
       }
+
       .right-section {
         height: auto;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="left-section">
@@ -191,44 +222,75 @@
       <p>Passionate and skilled full-stack Java developer eager to contribute and grow in the IT field.</p>
       <div class="info">
         <h2>Career Objective</h2>
-        <p>To obtain a challenging role in software development where I can apply my skills in Java technologies and continuously grow with the industry.</p>
+        <p>To obtain a challenging role in software development where I can apply my skills in Java technologies and
+          continuously grow with the industry.</p>
 
         <h2>Education</h2>
         <p>B.Tech in Information Technology</p>
-        
+
         <h2>Technical Skills</h2>
         <div style="display: flex; justify-content: center;">
-        <div class="skills">
-           <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java">
-          <img src="https://img.icons8.com/ios/50/mysql-logo.png" alt="MySQL">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-plain.svg" alt="Hibernate">
-          <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot">
-          <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript">
-          <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML">
-          <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
-       </div>
-       </div>
-       
-
-        <h2>Projects</h2>
-        <div class="projects">
-          <div class="project">
-            <h3>Food App</h3>
-            <p>Created a food ordering web application including home page, menu, cart, and checkout functionality.</p>
-            <p><strong>Technologies:</strong> Core Java, JDBC, MySQL, Hibernate, Spring Boot, JEE, JavaScript, HTML, CSS</p>
+          <div class="skills">
+            <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java">
+            <img src="https://img.icons8.com/ios/50/mysql-logo.png" alt="MySQL">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-plain.svg"
+              alt="Hibernate">
+            <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot">
+            <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript">
+            <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML">
+            <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
           </div>
         </div>
 
-        <h2>Certifications</h2>
-         <button onclick="toggleCerts()" class="btn-download">Show Certifications</button>
-       <ul id="certList" style="display: none; padding-left: 20px;">
-       <li>Full Stack Java Developer - Tap Academy</li>
-        <li>Business English Certificate Preliminary - Cambridge Assessment</li>
-        <li>Soft Skills - NPTEL</li>
-        <li>Cybersecurity Privacy and Policy - NPTEL</li>
-        <li>What is Data Science - IBM (Coursera)</li>
-        <li>Oracle Certified Foundation Associate - Oracle Cloud Infrastructure</li>
+        <h2 style="cursor: pointer;" onclick="toggleSection('projectList', this)">▶ Projects</h2>
+        <ul id="projectList" style="display: none; padding-left: 20px;">
+          <li>
+            <strong>🍽️ Food Delivery Web Application</strong><br />
+            <em>A Full-Stack Online Food Ordering System</em><br />
+            <strong>Description:</strong>
+            <ul>
+              <li>Designed and developed a dynamic web application for browsing menus, adding items to cart, and
+                processing orders.</li>
+              <li>Implemented cart features similar to Amazon/Swiggy with quantity updates and total price calculation
+                using JavaScript.</li>
+              <li>Handled backend operations with Java, Servlets, JDBC and MySQL for real-time data operations.</li>
+              <li>Ensured responsive UI using HTML, CSS, and JavaScript with proper input validations.</li>
+              <li>Integrated Hibernate and Spring Boot to manage data flow and enhance scalability.</li>
+            </ul>
+            <strong>Technologies Used:</strong> Core Java, JDBC, MySQL, Hibernate, Spring Boot, JEE, JavaScript, HTML,
+            CSS
+          </li>
+          <br />
+          <li>
+            <strong>🛍 Monitoring Fake Reviews of Products</strong><br />
+            <em>Ensuring Authenticity in Consumer Feedback</em><br />
+            <strong>Description:</strong>
+            <ul>
+              <li>Developed a machine learning model to detect fake or AI-generated product reviews using Logistic
+                Regression and LSTM.</li>
+              <li>Performed data preprocessing, tokenization, and vectorization using TF-IDF techniques.</li>
+              <li>Built an interactive web interface using Streamlit for user input and live prediction.</li>
+              <li>Improved accuracy and reduced false positives by fine-tuning model thresholds.</li>
+            </ul>
+            <strong>Tools & Technologies:</strong> Python, Anaconda, Streamlit, Logistic Regression, LSTM, Pandas,
+            Scikit-learn, NLP
+          </li>
         </ul>
+
+
+
+
+
+        <h2 style="cursor: pointer;" onclick="toggleSection('certList', this)">▶ Certifications</h2>
+        <ul id="certList" style="display: none; padding-left: 20px;">
+          <li>Full Stack Java Developer - Tap Academy</li>
+          <li>Business English Certificate Preliminary - Cambridge Assessment</li>
+          <li>Soft Skills - NPTEL</li>
+          <li>Cybersecurity Privacy and Policy - NPTEL</li>
+          <li>What is Data Science - IBM (Coursera)</li>
+          <li>Oracle Certified Foundation Associate - Oracle Cloud Infrastructure</li>
+        </ul>
+
 
 
         <h2>Languages Known</h2>
@@ -238,52 +300,71 @@
     </div>
 
     <div class="right-section">
-  <lottie-player
-    src="https://assets5.lottiefiles.com/packages/lf20_tno6cg2w.json"
-    background="transparent"
-    speed="1"
-    style="width: 100%; max-width: 500px; height: auto;"
-    loop autoplay>
-  </lottie-player>
+      <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_tno6cg2w.json" background="transparent"
+        speed="1" style="width: 100%; max-width: 500px; height: auto;" loop autoplay>
+      </lottie-player>
       <div class="right-content">
-        Ready to work as:<br/>
-        Web Developer<br/>
-        Front-end Developer<br/>
-        Back-end Developer<br/>
-        Software Developer<br/>
+        Ready to work as:<br />
+        Web Developer<br />
+        Front-end Developer<br />
+        Back-end Developer<br />
+        Software Developer<br />
         Software Tester
       </div>
     </div>
   </div>
 
- <footer oncontextmenu="return false;">
-  <p>Contact: kaviyasrirajendiran11@gmail.com | Phone: 9751358104 | Salem, India</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/kaviyasri-r-888a36250/" style="color:#fff;" target="_blank">View Profile</a> | GitHub: <a href="https://github.com/Kaviyasri11" style="color:#fff;" target="_blank">@Kaviyasri11</a></p>
-  <p>&copy; 2025 Kaviyasri R. All Rights Reserved.</p>
-</footer>
-<script>
-  function toggleCerts() {
-    const list = document.getElementById("certList");
-    if (list.style.display === "none") {
-      list.style.display = "block";
-    } else {
-      list.style.display = "none";
-    }
-  }
-</script>
-<script>
-  // Disable right-click globally (except on resume download)
-  document.addEventListener('contextmenu', event => {
-    if (!event.target.closest('a.btn-download')) {
-      event.preventDefault();
-    }
-  });
+  <footer oncontextmenu="return false;">
+    <p style="margin-bottom: 15px;">Contact me:</p>
 
-  // Prevent dragging of images and lottie animation
-  document.querySelectorAll('img, lottie-player').forEach(el => {
-    el.setAttribute('draggable', false);
-    el.addEventListener('mousedown', e => e.preventDefault());
-  });
-</script>
+    <div
+      style="display: flex; justify-content: center; gap: 25px; align-items: center; flex-wrap: wrap; margin-bottom: 10px;">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/kaviyasri-r-888a36250/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"
+          style="width: 30px; height: 30px;" title="LinkedIn" />
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Kaviyasri11" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub"
+          style="width: 30px; height: 30px;" title="GitHub" />
+      </a>
+
+
+    </div>
+
+    <p style="color: #ccc; font-size: 0.9rem;">📍Salem, India | 📞+91 9751358104 |<a href="https://mail.google.com/mail/?view=cm&fs=1&to=kaviyasrirajendran11@gmail.com" target="_blank">
+  <i class="fas fa-envelope"></i> ✉️kaviyasrirajendran11@gmail@gmail.com
+</a></p>
+    <p style="margin-top: 20px;">&copy; 2025 Kaviyasri R. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleSection(id, heading) {
+      const list = document.getElementById(id);
+      const isVisible = list.style.display === "block";
+
+      list.style.display = isVisible ? "none" : "block";
+      heading.innerHTML = (isVisible ? '▶ ' : '▼ ') + heading.textContent.slice(2);
+    }
+  </script>
+
+  <script>
+    // Disable right-click globally (except on resume download)
+    document.addEventListener('contextmenu', event => {
+      if (!event.target.closest('a.btn-download')) {
+        event.preventDefault();
+      }
+    });
+
+    // Prevent dragging of images and lottie animation
+    document.querySelectorAll('img, lottie-player').forEach(el => {
+      el.setAttribute('draggable', false);
+      el.addEventListener('mousedown', e => e.preventDefault());
+    });
+  </script>
 </body>
+
 </html>
