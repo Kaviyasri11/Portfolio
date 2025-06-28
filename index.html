@@ -253,9 +253,24 @@
     </div>
   </div>
 
-  <footer>
-    <p>Contact: kaviyasrirajendiran11@gmail.com | Phone: 9751358104 | Salem, India</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kaviyasri-r-888a36250/" style="color:#fff;" target="_blank">View Profile</a> | GitHub: <a href="https://github.com/Kaviyasri11" style="color:#fff;" target="_blank">@Kaviyasri11</a></p>
-  </footer>
+ <footer oncontextmenu="return false;">
+  <p>Contact: kaviyasrirajendiran11@gmail.com | Phone: 9751358104 | Salem, India</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/kaviyasri-r-888a36250/" style="color:#fff;" target="_blank">View Profile</a> | GitHub: <a href="https://github.com/Kaviyasri11" style="color:#fff;" target="_blank">@Kaviyasri11</a></p>
+  <p>&copy; 2025 Kaviyasri R. All Rights Reserved.</p>
+</footer>
+<script>
+  // Disable right-click globally (except on resume download)
+  document.addEventListener('contextmenu', event => {
+    if (!event.target.closest('a.btn-download')) {
+      event.preventDefault();
+    }
+  });
+
+  // Prevent dragging of images and lottie animation
+  document.querySelectorAll('img, lottie-player').forEach(el => {
+    el.setAttribute('draggable', false);
+    el.addEventListener('mousedown', e => e.preventDefault());
+  });
+</script>
 </body>
 </html>
