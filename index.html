@@ -541,7 +541,28 @@
 
   observer.observe(document.getElementById("profileHeader"));
 </script>
+<script>
+function scrollToSection(id) {
+  const section = document.getElementById(id);
 
+  // Special handling for project section
+  if (id === "projectContainer") {
+    if (section.style.display === "none") {
+      section.style.display = "block";
+      const arrow = document.getElementById("mainArrow");
+      if (arrow) arrow.classList.add("rotate");
+    }
+  }
+
+  // Scroll smoothly
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+
+  // Auto-close menu
+  document.getElementById("floatingMenu").style.display = "none";
+}
+</script>
 
 </body>
 
