@@ -247,53 +247,7 @@
       }
     }
 
-    .floating-menu {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    .menu-btn {
-      background-color: #557a8e;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      font-size: 22px;
-      padding: 10px 15px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .menu-items {
-      display: none;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-top: 8px;
-      gap: 8px;
-    }
-
-    .menu-items button {
-      background-color: #3f454e;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .menu-items button:hover {
-      background-color: black;
-    }
-
-    .menu-items a {
-      text-decoration: none;
-    }
-
+   
    #fixedHeaderLeft {
   position: fixed;
   top: 0;
@@ -326,17 +280,7 @@
 
 <body>
 
-  <!-- Top-right Hamburger Floating Menu -->
-  <div class="floating-menu">
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    <div class="menu-items" id="floatingMenu">
-      <button onclick="scrollToSection('skills')">Skills</button>
-      <button onclick="scrollToSection('projectContainer')">Projects</button>
-      <a href="KaviyaResume.pdf" target="_blank"><button>Resume</button></a>
-      <button onclick="scrollToSection('footer')">Contact</button>
-    </div>
-  </div>
-
+  
 
   <div class="container">
     <div class="left-section">
@@ -512,19 +456,7 @@
       el.addEventListener('mousedown', e => e.preventDefault());
     });
   </script>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("floatingMenu");
-      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-    }
-
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-        document.getElementById("floatingMenu").style.display = "none"; // Auto-close after click
-      }
-    }
+  
   </script>
   <script>
   const observer = new IntersectionObserver(
@@ -540,28 +472,6 @@
   );
 
   observer.observe(document.getElementById("profileHeader"));
-</script>
-<script>
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-
-  // Special handling for project section
-  if (id === "projectContainer") {
-    if (section.style.display === "none") {
-      section.style.display = "block";
-      const arrow = document.getElementById("mainArrow");
-      if (arrow) arrow.classList.add("rotate");
-    }
-  }
-
-  // Scroll smoothly
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-
-  // Auto-close menu
-  document.getElementById("floatingMenu").style.display = "none";
-}
 </script>
 
 </body>
